@@ -69,7 +69,7 @@ body._lock{
     .content{
         padding: 90px 2% 30px 2%;
         .content__section{
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3) );
             backdrop-filter: blur(2rem);
@@ -191,60 +191,98 @@ body._lock{
         }
         .page__section_3{
             margin-top: 3rem;
-            .content__box_3{       
-                padding: 2% 5%;
+            .content__box_3{    
+                justify-content: start;   
+                padding: 20px 5px;
                 color: white;
-                flex-wrap: wrap;
-                .content__box_3-card{
-                    position: relative;
+                overflow: hidden;
+                .content__box_slider{
                     display: flex;
-                    min-height: 250px;
-                    width: 30%;
-                    margin-bottom: 30px;
-                    border: 1px solid black;
-                    padding: 15px;
-                    .card__logo{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background: #2e4565;
+                    gap: 20px;
+                    transition: 0.4s ease-in-out;
+                    .content__box_3-card{
+                        position: relative;
                         display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        overflow: hidden;
-                        transition: 0.5s ease-in-out;
-                        span{
-                            font-size: 70px;
-                            display: block;
-                            transition: 0.5s ease-in-out  
-                        } 
+                        height: 400px;
+                        min-width: 300px;
+                        width: 300px;
+                        padding: 15px;
+                        background: rgba(0, 0, 0, 0.1);
+                        .card__logo{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: #2e4565;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            overflow: hidden;
+                            transition: 0.5s ease-in-out;
+                            span{
+                                font-size: 70px;
+                                display: block;
+                                transition: 0.5s ease-in-out  
+                            } 
+                        }
+                        .card__content{
+                            margin-left: 55px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: left;
+                            .card_text{
+                                line-height: 130%;
+                                font-size: 18px;
+                                width: 200px;
+                            }    
+                        }                     
                     }
-                    .card__content{
-                        margin-left: 65px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        .card_text{
-                            line-height: 130%;
-                            font-size: 18px;
-                        }    
-                    }                     
+                    .content__box_3-card:hover .card__logo{
+                        width: 75px;
+                        height: 75px;
+                        left: -15px;
+                        top: calc(20% - 45px);
+                        background: #0a192f;
+                    }
+                    .content__box_3-card:hover .logo{
+                        font-size: 40px;
+                    }
+                    .content__box_3-card:hover .card__logo_name{
+                        font-size: 15px;
+                    }
                 }
-                .content__box_3-card:hover .card__logo{
-                    width: 75px;
-                    height: 75px;
-                    left: -15px;
-                    top: calc(20% - 45px);
-                    background: #0a192f;
+                .icon-right{
+                    display: block;
+                    position: absolute;
+                    top: 40%;
+                    right: 0;
+                    font-size: 50px;
+                    padding: 70px 0;
+                    background: rgba(0, 0, 0, 0.1);
+                    transition: 0.5s;
+                    border-radius: 5px 0 0 5px;
+                    cursor: pointer;
                 }
-                .content__box_3-card:hover .logo{
-                    font-size: 40px;
+                .icon-left{
+                    display: block;
+                    position: absolute;
+                    top: 40%;
+                    left: 0;
+                    font-size: 50px;
+                    padding: 70px 0;
+                    background: rgba(0, 0, 0, 0.1);
+                    transition: 0.5s;
+                    border-radius: 0 5px 5px 0;
+                    cursor: pointer;
                 }
-                .content__box_3-card:hover .card__logo_name{
-                    font-size: 15px;
+                .icon-right:hover{
+                    background: rgba(255, 255, 255, 0.3);
+                }
+                .icon-left:hover{
+                    background: rgba(255, 255, 255, 0.3);
                 }
             }
         }
@@ -326,7 +364,7 @@ body._lock{
         background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3) );
         backdrop-filter: blur(2rem);
         width: 100%;
-        height: 200px;
+        height: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -561,6 +599,16 @@ body._lock{
                         h1{
                             font-size: 38px;
                         }
+                    }
+                }
+            }
+            .page__section_3{
+                .content__box_3{
+                    .icon-right{
+                        font-size: 30px;
+                    }
+                    .icon-left{
+                        font-size: 30px;
                     }
                 }
             }

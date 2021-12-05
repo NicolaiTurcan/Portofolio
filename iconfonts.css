@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src:  url('fonts/icons.eot?fsbjbf');
-  src:  url('fonts/icons.eot?fsbjbf#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?fsbjbf') format('truetype'),
-    url('fonts/icons.woff?fsbjbf') format('woff'),
-    url('fonts/icons.svg?fsbjbf#icons') format('svg');
+  src:  url('fonts/icons.eot?swvpzu');
+  src:  url('fonts/icons.eot?swvpzu#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?swvpzu') format('truetype'),
+    url('fonts/icons.woff?swvpzu') format('woff'),
+    url('fonts/icons.svg?swvpzu#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,6 +13,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -24,6 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-right:before {
+  content: "\e913";
+}
+.icon-left:before {
+  content: "\e914";
+}
+.icon-linkedin:before {
+  content: "\e912";
+}
 .icon-mail:before {
   content: "\e911";
 }
@@ -80,7 +90,4 @@
 }
 .icon-twitter:before {
   content: "\e90f";
-}
-.icon-linkedin:before {
-  content: "\e912";
 }
