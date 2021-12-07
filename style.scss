@@ -14,7 +14,7 @@ body._lock{
 
 .wrapper{
     min-height: 100%;
-    background: #0a192f;
+    background: linear-gradient(rgb(47, 59, 84), rgb(23, 28, 40));
     .header{
         position: fixed;
         top: 0;
@@ -39,7 +39,7 @@ body._lock{
                     height: 100%;
                     .menu__link{
                         position: relative;
-                        color: #000;
+                        color: #393131;
                         font-weight: 700;
                         font-size: 22px;
                         padding: 10px 0px;
@@ -192,8 +192,9 @@ body._lock{
         .page__section_3{
             margin-top: 3rem;
             .content__box_3{    
+                position: relative;
                 justify-content: start;   
-                padding: 20px 5px;
+                padding: 25px 5px;
                 color: white;
                 overflow: hidden;
                 .content__box_slider{
@@ -207,14 +208,16 @@ body._lock{
                         min-width: 300px;
                         width: 300px;
                         padding: 15px;
-                        background: rgba(0, 0, 0, 0.1);
+                        border-radius: 5px;
+                        background: rgba(0, 0, 0, 0.4);
                         .card__logo{
                             position: absolute;
                             top: 0;
                             left: 0;
                             width: 100%;
                             height: 100%;
-                            background: #2e4565;
+                            border-radius: 5px;
+                            background: linear-gradient(#425376, #151a25);
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
@@ -234,9 +237,12 @@ body._lock{
                             align-items: center;
                             text-align: left;
                             .card_text{
-                                line-height: 130%;
+                                line-height: 100%;
                                 font-size: 18px;
                                 width: 200px;
+                                .card_text_el{
+                                    padding-bottom: 13px;
+                                }
                             }    
                         }                     
                     }
@@ -257,7 +263,7 @@ body._lock{
                 .icon-right{
                     display: block;
                     position: absolute;
-                    top: 40%;
+                    top: 27%;
                     right: 0;
                     font-size: 50px;
                     padding: 70px 0;
@@ -269,7 +275,7 @@ body._lock{
                 .icon-left{
                     display: block;
                     position: absolute;
-                    top: 40%;
+                    top: 27%;
                     left: 0;
                     font-size: 50px;
                     padding: 70px 0;
@@ -285,31 +291,130 @@ body._lock{
                     background: rgba(255, 255, 255, 0.3);
                 }
             }
+            .contetnt__header-bottom{
+                text-align: center;
+                color: #3e3434;
+                font-size: 50px;
+                margin-top: 20px;
+                font-weight: 600;
+                text-shadow: 0 5px 5px rgba(0,0,0,0.3);
+            }
+            .content__box_feature{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 25px;
+                padding: 50px 0;
+                .card_logo{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: #fff;
+                    transition: transform 0.4s;
+                    span{
+                        display: block;
+                        font-size: 70px;
+                    }
+                }
+                .card_logo:hover{
+                    transform: scale(1.15);
+                }
+            }
         }
         .page__section_4{
             margin-top: 3rem;
-            .content__cardBox{
+            .content__projectsBox{
                 display: flex;
-                justify-content: space-around;
-                flex-wrap: wrap;
-                padding: 5% 5% 2% 5%;
-                .content__card{
-                    max-width: 320px;
-                    margin-bottom: 3rem;
-                    transition: 0.5s;
-                    img{
-                        width: 100%;
-                        height: 450px;
-                        border-radius: 15px;
-                        filter: grayscale(0.4);
+                flex-direction: column;
+                align-items: center;
+                padding: 25px 5px;
+                .project__card{
+                    position: relative;
+                    display: flex;
+                    text-align: right;
+                    margin-top: 25px;
+                    max-width: 1000px;
+                    width: 100%;
+                    border-radius: 5px;
+                    background: linear-gradient(rgb(47, 59, 84), rgb(23, 28, 40));
+                    .project__img{
+                        width: 60%;
+                        border-radius: 5px;
+                        a{
+                            display: block;
+                            border-radius: 5px;
+                            background: #0057fa;
+                            img{
+                                width:100%;
+                                height: 425px;
+                                border-radius: 5px;
+                                vertical-align: middle;
+                                opacity: 0.9;
+                                filter: grayscale(1) contrast(0.5);
+                                transition: all 0.4s ease 0s;
+                            }
+                            img:hover{
+                                opacity: 1;
+                                filter: grayscale(0) contrast(1);
+                            }
+                        }
+                    }
+                    .project__content{
+                        text-align: end;
+                        position: absolute;
+                        top: 16%;
+                        .projetct__title{
+                            font-size: 20px;
+                            color: #fff;
+                            font-weight: 600;
+                            margin-bottom: 50px;
+                        }
+                        .project__description{
+                            font-size: 18px;
+                            max-width: 500px;
+                            padding: 25px;
+                            border-radius: 5px;
+                            background: linear-gradient(rgb(47, 59, 84), rgb(23, 28, 40));
+                            box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+                            line-height: 130%;
+                            color: #fff;
+                        }
+                        ul{
+                            display: flex;
+                            justify-content: flex-end;
+                            color: #fff;
+                            li{
+                                padding: 10px;
+                            }
+                        }
+                        .project__texList-left{
+                            justify-content: start;
+                            flex-wrap: wrap;
+                        }
+                        .project__links{
+                            a{
+                                display: inline-block;
+                                color: #fff;
+                                padding: 10px;
+                                font-size: 25px;
+                                transition: transform 0.4s;
+                            }
+                            a:hover{
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                    .project__content-left{
+                        text-align: start;
+                        left: 25px;
+                        max-width: 500px;
+                    }
+                    .project__content-right{
+                        right: 25px;
                     }
                 }
-                .content__card:hover{
-                    transform: scale(1.05);
-                    box-shadow: 0px 2px 25px 4px rgb(178, 123, 87);
-                }
-                .content__card:hover img{
-                    filter: grayscale(0);
+                .left_card{
+                    flex-direction: row-reverse;
                 }
             }
         }
@@ -444,6 +549,7 @@ body._lock{
                     }
                 }
             }
+            
         }
     }
 }
@@ -548,6 +654,55 @@ body._lock{
                     flex-wrap: wrap;
                 }
             }
+            .page__section_3{
+                .contetnt__header-bottom{
+                    font-size: 40px;
+                }
+            }
+            .page__section_4{
+                .content__projectsBox{
+                    .project__card{
+                        .project__img{
+                            width: 100%;
+                        }
+                        .project__content{
+                            text-align: left;
+                            padding: 40px 40px 30px;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            right: 0;
+                            background: rgba(0, 0, 0, 0.5);
+                            border-radius: 5px;
+                            .projetct__title{
+                                margin-bottom: 0px;
+                                margin-top: 50px;
+                            }
+                            .project__description{
+                                max-width: 100%;
+                                padding: 25px 0px;
+                                background: none;
+                            }
+                            ul{
+                                justify-content: flex-start;
+                            }
+                            .project__links{
+                                display: flex;
+                                justify-content: flex-end;
+                                a{
+                                    font-size: 31px;
+                                    margin-top: 10px;
+                                }
+                            }    
+                        }
+                        .project__content-left{
+                            left: 0;
+                            max-width: 800px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -587,6 +742,36 @@ body._lock{
                     }
                 }
             }
+            .page__section_4{
+                .content__projectsBox{
+                    .project__card{
+                        .project__content{
+                            padding: 10px;
+                            .projetct__title{
+                                margin-top: 100px;
+                                font-size: 20px;
+                            }
+                            .project__description{
+                                font-size: 16px;
+                            }
+                            ul{
+                                font-size: 16px;
+                                li{
+                                    padding: 10px 10px 10px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .page__section_3{
+                .contetnt__header-bottom{
+                    font-size: 30px;
+                }
+                .content__box_feature{
+                    padding: 25px 0;
+                }
+            }
         }
     }
 }
@@ -609,6 +794,24 @@ body._lock{
                     }
                     .icon-left{
                         font-size: 30px;
+                    }
+                }
+            }
+            .page__section_4{
+                .content__projectsBox{
+                    .project__card{
+                        .project__content{
+                            .project__texList{
+                                flex-wrap: wrap;
+                                li{
+                                    padding: 10px 10px 0 0;
+                                    font-size: 14px;
+                                }
+                            }
+                            .projetct__title{
+                                margin-top: 70px;
+                            }
+                        }
                     }
                 }
             }
