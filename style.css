@@ -267,13 +267,13 @@ body._lock {
 
 .wrapper .content .page__section_1 .content__box .content__box_logo .logo {
   position: absolute;
-  background: url(./img/nicolai_foto.jpg);
+  background: url(./img/n_t.jpg);
   background-size: cover;
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  -webkit-filter: grayscale(1) contrast(1.6) brightness(1.5);
-          filter: grayscale(1) contrast(1.6) brightness(1.5);
+  -webkit-filter: grayscale(1) contrast(1.4) brightness(1.4);
+          filter: grayscale(1) contrast(1.4) brightness(1.4);
 }
 
 .wrapper .content .page__section_1 .content__box .content__box_logo .logo_text {
