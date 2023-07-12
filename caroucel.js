@@ -21,6 +21,7 @@ let courucel = () => {
             counter += slider.clientWidth - cumuletiv;
             slider.style.transform = "translateX(" + `${-(counter)}px )`;
             cumuletiv += (slider.clientWidth - cumuletiv)
+            right.disabled = true;
         } else {
             counter += stepSize;
             slider.style.transform = "translateX(" + `${-counter}px )`;
